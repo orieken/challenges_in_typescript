@@ -10,6 +10,6 @@ export = function() {
 
   this.Then(/^I should see the "([^"]*)" message$/, function (expectedMessage) {
     // Write code here that turns the phrase above into concrete actions
-    expect(element(by.tagName('h1')).getText()).to.eventually.equal(expectedMessage)
+    return expect(element(by.tagName('h1')).getText()).to.eventually.equal(expectedMessage);
   });
 }
