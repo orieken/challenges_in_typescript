@@ -14,6 +14,7 @@ module.exports = function (config) {
       require('karma-spec-reporter')
     ],
     files: [
+      { pattern: './lib/**/*.spec.ts', watched: false },
       { pattern: './src/test.ts', watched: false }
     ],
     preprocessors: {

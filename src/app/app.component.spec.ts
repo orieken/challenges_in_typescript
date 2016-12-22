@@ -4,6 +4,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FibonacciComponent } from "./fibonacci/fibonacci.component";
 import { RouterTestingModule } from "@angular/router/testing";
+import { MaterialModule } from "@angular/material";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -12,7 +13,10 @@ describe('AppComponent', () => {
         AppComponent,
         FibonacciComponent
       ],
-      imports: [ RouterTestingModule ]
+      imports: [
+        RouterTestingModule,
+        MaterialModule.forRoot(),
+      ]
     });
   });
 
