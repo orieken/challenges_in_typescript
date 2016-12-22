@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fibonacci.component.css']
 })
 export class FibonacciComponent implements OnInit {
+  title = 'app works!';
 
   constructor() { }
 

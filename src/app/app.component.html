@@ -1,10 +1,37 @@
-<nav class="mdl-navigation">
-  <a class="mdl-navigation__link" [routerLink]="['/']">Home</a>
-  <a class="mdl-navigation__link" [routerLink]="['/fibonacci']">Fibonacci</a>
-</nav>
+<md-sidenav-layout fullscreen>
 
-<h1>
-  {{title}}
-</h1>
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    <div>
+      <button md-raised-button
+              [routerLink]="['/']"
+              color="primary"
+      >Home
+      </button>
+    </div>
+    <br>
+    <div color="primary">
+    <button md-raised-button
+            [routerLink]="['/fibonacci']"
+            color="primary"
+    >Fibonacci
+    </button>
+    </div>
+    <br>
+  </md-sidenav>
 
-<router-outlet></router-outlet>
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()" color="primary">
+      <i class="material-icons app-toolbar-menu" color="primary">menu</i>
+    </button>
+    <span class="app-toolbar-filler"></span>
+    Challenges
+    <span class="app-toolbar-filler"></span>
+
+  </md-toolbar>
+  <div class="app-content">
+    <md-card>
+      <h1 class="header-text">{{title}}</h1>
+      <router-outlet></router-outlet>
+    </md-card>
+  </div>
+</md-sidenav-layout>

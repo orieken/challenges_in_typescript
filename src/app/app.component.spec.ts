@@ -2,13 +2,17 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { FibonacciComponent } from "./fibonacci/fibonacci.component";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        FibonacciComponent
       ],
+      imports: [ RouterTestingModule ]
     });
   });
 
