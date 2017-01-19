@@ -6,11 +6,11 @@
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test",
-    "test:once": "ng test --single-run=true",
+    "test:once": "ng test",
+    "test": "ng test --single-run=true",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "cucumber": "cucumber --dry-run"
+    "cucumber": "cucumber.js --dry-run"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +49,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-osx-reporter": "^0.2.1",
+    "karma-phantomjs-launcher": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
     "karma-spec-reporter": "0.0.26",
     "protractor": "4.0.11",
