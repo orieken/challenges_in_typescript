@@ -6,5 +6,4 @@ describe('Decorator Pattern',() => {
     expect(true).toBeTruthy();
   });
 
-
 });
